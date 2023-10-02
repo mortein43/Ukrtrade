@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukrtrader</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header class="header d-flex justify-content-between">
+        <a href="../index.html" class="logo">
+            <figure>
+                <img src="../images/logo.png" alt="logo">
+            </figure>
+        </a>
+        <div class="header_menu">
+            <nav>
+                <ul class="nav d-flex justify-content-between">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" style="padding: 0;">Про нас</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" style="padding: 0;">Акції</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" style="padding: 0;">Доставка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="padding: 0;">Оплата</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="padding: 0;">Контакти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="padding: 0;">UA <img style="margin-left: 5px;" src="../images/uk.png" alt="uk"></a>
+                    </li>
+                  </ul>
+            </nav>
+            <div class="header_input_dropdown row d-flex justify-content-between"> <!--d-flex justify-content-between-->
+                <a class="button_drop col-4" href="catalog.html">
+                    <img style="margin-left: 5%;" src="../images/iconForButtonDrop.png" alt="">
+                    <span style="margin-left: 5%;">Каталог</span>
+                </a>
+                <div class="header_input col-7">
+                    <input type="text" placeholder="Пошук" class="input-find ">
+                </div>
+            </div>
+        </div>
+        <div class="header_phone">
+            <p>+48 (57) 105-5718</p>
+            <div class="d-flex header_icons">
+                <div style="position: relative; margin-right: 15px;" class="header_icons_like_list">
+                    <img src="../images/icon_like.png" alt="like">
+                    <p style="position: absolute; top: 1px; left: 33px; font-size: 10px; color: #fff;" onclick="">20</p>
+                </div>
+                <div style="position: relative; margin-right: 15px;" class="header_icons_basket_list">
+                    <a href="/pages/basket.html"><img src="../images/icon_basket.png" alt="like"></a>
+                    <p style="position: absolute; top: 1px; left: 36px; font-size: 10px; color: #fff;" onclick="">2</p>
+                </div>
+                <div style="position: relative;">
+                    <img src="../images/icon_login.png" alt="like">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="basket_under_header_line">
+        <p>Головна <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14" fill="none">
+            <path d="M1 13L5.5 7L0.999999 1" stroke="#5B5A5A" stroke-width="1.5" stroke-linecap="round"/>
+            </svg> Корзина <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14" fill="none">
+                <path d="M1 13L5.5 7L0.999999 1" stroke="#5B5A5A" stroke-width="1.5" stroke-linecap="round"/>
+                </svg> Оформлення замовлення</p>
+    </div>
+    <main style="padding-top: 62px;">
+        <h2>Оформлення замовлення</h2>
+        <div class="user_info_order">
+            <p>Контактні дані отримувача</p>
+            <div>
+                <div class="row d-flex justify-content-between">
+                    <input type="text" placeholder="Ім’я">
+                    <input type="text" placeholder="Прізвище">
+                </div>
+                <div class="row d-flex justify-content-between">
+                    <p class="col6">Error</p>
+                    <p class="col6">Error</p>
+                </div>
+            </div>
+            <div>
+                <div class="row d-flex justify-content-between">
+                    <input type="text" placeholder="Номер телефону">
+                    <input type="text" placeholder="E-mail:">
+                </div>
+                <div class="row d-flex justify-content-between">
+                    <p class="col6">Error</p>
+                    <p class="col6">Error</p>
+                </div>
+            </div>
+        </div>
+        <div class="method_of_delivery">
+            <p>Спосіб доставки</p>
+            <div class="radio">
+                <input class="radio_input" type="radio" name="radio_delivery" id="choosen_nova-poshta" checked> 
+                <label class="radio_label" for="choosen_nova-poshta">Самовивіз з Нової Пошти</label>
+            </div>
+            <div class="radio">
+                <input class="radio_input" type="radio" name="radio_delivery" id="choosen_ukrposhta"> 
+                <label class="radio_label" for="choosen_ukrposhta">Самовивіз з Укрпошти</label> 
+            </div>
+            <div class="radio">
+                <input class="radio_input" type="radio" name="radio_delivery" id="choosen_meest-courier"> 
+                <label class="radio_label" for="choosen_meest-courier">Кур’єр Meest</label>
+            </div>
+        </div>
+        <div class="payment-method">
+            <p>Спосіб оплати</p>
+            <div class="radio">
+                <input class="radio_input" type="radio" name="radio_payment" id="choosen_pay-upon-receipt" checked onchange="showCardInputElements(true)"> 
+                <label class="radio_label" for="choosen_pay-upon-receipt">Оплата під час отримання товару</label>
+            </div>
+            <div class="radio">
+                <input class="radio_input" type="radio" name="radio_payment" id="choosen_pay-now" onchange="showCardInputElements(false)"> 
+                <label class="radio_label" for="choosen_pay-now">Оплатити зараз</label>
+            </div>
+        </div>
+        <div class="add_card" style="margin-left: 51px;">
+            <input style="margin-top: 42px; display: block;" type="text" placeholder="Номер картки" id="input_card-number">
+            <p>Error</p>
+            <div style="width: 100%; margin-top: 22px;">
+                <div style="max-width: 369px; " class="d-flex justify-content-between">
+                    <input style="width: 148px; display: block;" type="text" placeholder="Термін дії" id="input_card-validity"> 
+                    <input style="width: 96px; display: block;" type="text" placeholder="CVV" id="input_cvv">
+                    <img src="../images/credit_card.png">
+                </div>
+                <div class="row">
+                    <p class="col-5" style="text-align: center; color: red;" id="">Error</p>
+                    <p class="col-4" style="text-align: center; color: red;" id="">Error</p>
+                </div>
+            </div>
+            <button type="button">Додати</button>
+        </div>
+        <button class="order_confirm" type="button">Замовлення підтверджую</button>
+
+    </main>
+    <footer>
+        <div class="line" style="width: 100%; height: 16px; background: #202B46;"></div>
+        <div class="d-flex justify-content-around footer-block-2" >
+            <div>
+                <a href="#"><p>Про нас</p></a>
+                <a href="#"><p>Акції</p></a>
+                <a href="#"><p>Доставка</p></a>
+                <p style="font-size: 12px;">(c)  UKRTRADE GROUP - 2022</p>
+            </div>
+            <div>
+                <a href="#"><p>Оплата</p></a>
+                <a href="#"><p>Контакти</p></a>
+                <a href="#"><p>Відгуки</p></a>
+            </div>
+            <div>
+                <a href="#"><p>Особистий кабінет</p></a>
+                <a href="#"><p>Питання та віповіді</p></a>
+            </div>
+            <div class="text-right">
+                <p style="font-size: 18px;">Графік роботи<br>з 9.00 до 20.00</p>
+                <a style="font-size: 20px; font-weight: 500;" href="tel:+48571055718">+48 (57) 105-5718</a>
+                <a style="font-size: 18px; margin-top: 17px;" href="mailto:ukrtrade.g@gmail.com">ukrtrade.g@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
