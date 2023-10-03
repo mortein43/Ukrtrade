@@ -16,6 +16,9 @@ body {
 .header_menu > nav > ul > li > a {
     color: #5B5A5A;
 }
+.header_menu > nav > ul>li:nth-child(7) {
+    display: none;
+}
 .logo, .header_menu, .header_phone {
     display: inline-block;
 }
@@ -70,7 +73,7 @@ margin: 0;
 main {
     padding: 0 55px 89px 55px;
 }
-/*Стилі для слайдера*/
+/*Стилі для слайдера та index.html*/
 .slideshow-container {
     max-width: 1000px;
     position: relative;
@@ -141,6 +144,9 @@ main {
 .block-4 {
     margin-top: 43px;
 }
+.block-4>.card-paraffin>a:hover {
+    text-decoration: none;
+}
 .card-paraffin {
     max-width: 380px;
     height: 500px;
@@ -177,6 +183,168 @@ footer>div>div>a:hover {
 .text-right>a {
     color: #202B46;
     display: block;
+}
+.burger_menu {
+    display: none;
+}
+
+@media (width < 769px) {
+    body.lock {
+        overflow: hidden;
+    }
+    footer,.button_drop, .header_phone>p{
+        display: none;
+    }
+    .header {
+        padding: 29px 16px 0 16px;
+    }
+    body {
+        position: relative;
+    }
+    .header_icons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 15px 50% 25px 25%;
+        border-top: 0.5px solid #202B46;
+    }
+    .header>a>figure>img {
+        width: 71px;
+        position: relative;
+        z-index: 3;
+    }
+    .header {
+        border-bottom: 0.5px solid #202B46;
+        position: relative;
+        z-index: 2;
+        background-color: #fff;
+    }
+    .header_input>input::placeholder {
+        color: transparent;
+    }
+    .header_input>input:focus::placeholder {
+        color: #AEABAB;
+    }
+    .input-find {
+        border-radius: 50%;
+        width: 43px;
+        background-position: 50%;
+        position: absolute;
+        left: 90%;
+    }
+    .input-find:focus {
+        border-radius: 25px;
+        width: 125px;
+        background-position: 50%;
+        position: absolute;
+        left: 30px;
+    }
+    .burger_menu {
+        display: block;
+        position: relative;
+        width: 22.5px;
+        height: 14.5px;
+
+    }
+    .burger_menu>span {
+        background-color: #202B46;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 6.3px;
+        transition: all 0.3s ease 0s;
+    }
+    .burger_menu::before, .burger_menu::after {
+        content: '';
+        background-color: #202B46;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .line_for_burger {
+        border: 1.5px solid #D9D9D9;
+        border-radius: 50%;
+        position: absolute;
+        right: 16px;
+        padding: 13.5px 10px;
+    }
+    .burger_menu::before {
+        top: 0;
+    }
+    .burger_menu::after {
+        bottom: 0;
+    }
+    .header_menu {
+        width: 100%;
+    }
+    .header_menu>nav>ul {
+        flex-direction: column;
+    }
+    .header_menu>nav>ul>li:nth-child(6) {
+        display: none;
+    }
+    .header_menu>nav>ul>li:nth-child(7) {
+        display: block;
+    }
+    .header_menu>nav>ul>li {
+        margin: 0 0 20px 0;
+    }
+    .header_menu>nav  {
+        position: fixed;
+        top: 105px;
+        left: -100%;
+        width: 35%;
+        height: 100%;
+        background-color: #ffffff;
+        padding: 30px 0 0 30px;
+        transition: all 0.5s ease 0s;
+        
+    }
+    .header_menu.active_burger>nav {
+        left: 0;
+    }
+    .burger_menu.active_burger::before {
+        transform: rotate(45deg);
+        top: 7px;
+    }
+    .burger_menu.active_burger::after {
+        transform: rotate(-45deg);
+        bottom: 5px;
+    }
+    .burger_menu.active_burger>span {
+        transform: scale(0);
+    }
+    .slideshow-container {
+        width: 100%;
+        height: 363px;
+    }
+    .slideshow-container {
+        display: block;
+        margin: 27px 0 0 0;
+    }
+    .divDot {
+        display: block;
+    }
+    main {
+        padding: 0 17px;
+        height: 150px;
+    }
+    .block-3>div, .block-4>div {
+        display: none;
+    }
+    
+    
+
+
+    /*main {
+        display: none;
+    }*/
+
+
+
 }
 /*basket.html*/
 .basket_under_header_line {
@@ -466,6 +634,48 @@ footer>div>div>a:hover {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
+}
+
+/*card_parafin.html*/
+.short_info_card_parafin {
+    width: 380px;
+    margin-left: 120px;
+    
+}
+.star_and_reviews {
+    margin-top: 50px;
+}
+.star_and_reviews>p {
+    margin-left: 27px;
+}
+#buy {
+    border-radius: 20px;
+    background: #E31E24;
+    font-size: 24px;
+    font-weight: 800;
+    color: #FFF;
+    text-align: center;
+    width: 221px;
+    height: 74px;
+    border: 20px solid #E31E24;
+}
+.icon_liked_card {
+    width: 74px;
+    height: 74px;
+    margin: 0 0 0 65px;
+}
+thead>tr {
+    color: #5B5A5A;
+    font-size: 20px;
+    font-weight: 500;
+    height: 65px;
+}
+tbody>tr {
+    color: #5B5A5A;
+    font-size: 16px;
+}
+table {
+    width: 35%;
 }
 
 
