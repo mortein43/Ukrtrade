@@ -6,12 +6,28 @@
 body {
     font-family: Roboto;
     color: #5B5A5A;
+    position: relative;
 }
 .header_menu {
-    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
 }
-.header_menu > nav > ul > li {
-    display: inline;
+.header_menu > nav {
+    width: 100%;
+}
+.line_for_burger {
+    display: none;
+}
+.header_menu > nav > ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.header_input_dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 .header_menu > nav > ul > li > a {
     color: #5B5A5A;
@@ -19,12 +35,16 @@ body {
 .header_menu > nav > ul>li:nth-child(7) {
     display: none;
 }
-.logo, .header_menu, .header_phone {
-    display: inline-block;
-}
 .header {
     padding: 71px 42px 0 55px;
+    display: flex;
+    justify-content: space-between;
     color: #5B5A5A;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FFF;
+    z-index: 2;
 }
 .button_drop {
     background-color: rgb(255, 255, 255, 0);
@@ -43,7 +63,7 @@ body {
     padding: 0;
 }
 .header_input_dropdown {
-    margin: 19px 0 0 0;
+    width: 100%;
 }
 .input-find {
     text-align: center;
@@ -51,7 +71,6 @@ body {
     background-position: 65%;
     width: 100%;
     height: 42px;
-    line-height: 10px;
     border-radius: 20px;
     border: 1px solid #AEABAB;
 }
@@ -60,9 +79,9 @@ body {
 }
 .header_phone>p {
     font-size: 20px;
-font-style: normal;
-font-weight: 400;
-margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
 }
 .header_icons {
     margin-top: 13px;
@@ -72,6 +91,9 @@ margin: 0;
 }
 main {
     padding: 0 55px 89px 55px;
+}
+.main_index {
+    margin-top: 252px;
 }
 /*Стилі для слайдера та index.html*/
 .slideshow-container {
@@ -203,10 +225,12 @@ footer>div>div>a:hover {
     }
     .header_icons {
         position: fixed;
+        width: 100%;
         bottom: 0;
         left: 0;
-        padding: 15px 50% 25px 25%;
         border-top: 0.5px solid #202B46;
+        justify-content: center;
+        padding: 15px 0 25px 0;
     }
     .header>a>figure>img {
         width: 71px;
@@ -328,12 +352,16 @@ footer>div>div>a:hover {
     .divDot {
         display: block;
     }
-    main {
+    .main_index {
         padding: 0 17px;
-        height: 150px;
+        height: 363px;
+        margin-top: 27px;
     }
     .block-3>div, .block-4>div {
         display: none;
+    }
+    .line_for_burger {
+        display: block;
     }
     
     
@@ -353,6 +381,7 @@ footer>div>div>a:hover {
     color: white;
     background-color: #202B46;
     padding: 12px 0 0 41px;
+    margin-top: 229px;
 
 }
 .basket_under_header_line>p {

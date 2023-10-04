@@ -12,8 +12,7 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <header class="header d-flex justify-content-between">
-        
+    <header class="header">
         <a href="index.html" class="logo">
             <figure>
                 <img src="images/logo.png" alt="logo">
@@ -21,7 +20,7 @@
         </a>
         <div class="header_menu menu">
             <nav>
-                <ul class="nav d-flex justify-content-between nav_list">
+                <ul class="nav nav_list">
                     <li class="nav-item">
                       <a  href="#" style="padding: 0;">Про нас</a>
                     </li>
@@ -45,7 +44,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="header_input_dropdown row d-flex justify-content-between"> <!--d-flex justify-content-between-->
+            <div class="header_input_dropdown row"> <!--d-flex justify-content-between-->
                 <a class="button_drop col-4" href="./pages/catalog.html">
                     <img style="margin-left: 5%;" src="images/iconForButtonDrop.png" alt="">
                     <span style="margin-left: 5%;">Каталог</span>
@@ -58,7 +57,6 @@
                         <span></span>
                     </div>
                 </div>
-                
             </div>
         </div>
         <div class="header_phone">
@@ -70,7 +68,7 @@
                 </div>
                 <div style="position: relative; margin-right: 15px;" class="header_icons_basket_list">
                     <a href="./pages/basket.html"><img src="images/icon_basket.png" alt="like"></a>
-                    <p style="position: absolute; top: 1px; left: 36px; font-size: 10px; color: #fff;" onclick="">2</p>
+                    <p style="position: absolute; top: 1px; left: 36px; font-size: 10px; color: #fff;" onclick="">5</p>
                 </div>
                 <div style="position: relative;">
                     <img src="images/icon_login.png" alt="like">
@@ -78,7 +76,7 @@
             </div>
         </div>
     </header>
-    <main class="main">
+    <main class="main_index">
         <div class="slideshow-container">
         </div>
         <div class="divDot d-flex justify-content-around" style="text-align: center;">
@@ -100,7 +98,7 @@
         </div>
         <div class="block-4 d-flex justify-content-around">
             <div class="card-paraffin">
-                <a href="/pages/card_parafin.html">
+                <a href="/ukrtrade/pages/card_parafin.html">
                 <figure>
                     <img class="icon_dont_like_card" src="images/icon_dont_like.png" alt="dont like" style="display: block;" onclick="">
                     <img src="images/card_paraffin.png" alt="paraffin" style="width: 95%; margin-top: 97px;">
@@ -272,7 +270,7 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 </body>
 </html>

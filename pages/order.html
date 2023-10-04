@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
     <link href="../style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -91,38 +92,38 @@
             <p>Контактні дані отримувача</p>
             <div>
                 <div class="row d-flex justify-content-between">
-                    <input type="text" placeholder="Ім’я">
-                    <input type="text" placeholder="Прізвище">
+                    <input type="text" onkeydown="return /[A-Za-zА-ЯЇІЄа-яїіє''`-]+/u.test(event.key)" placeholder="Ім’я" id="input_name" oninput="validateName()">
+                    <input type="text" onkeydown="return /[A-Za-zА-ЯЇІЄа-яїіє''`-]+/u.test(event.key)" placeholder="Прізвище" id="input_surname" oninput="validateSurname()">
                 </div>
                 <div class="row d-flex justify-content-between">
-                    <p class="col6">Error</p>
-                    <p class="col6">Error</p>
+                    <p class="col6" style="color: red; display: none;" id="error_input_name"></p>
+                    <p class="col6" style="color: red; display: none;" id="error_input_surname"></p>
                 </div>
             </div>
             <div>
                 <div class="row d-flex justify-content-between">
-                    <input type="text" placeholder="Номер телефону">
-                    <input type="text" placeholder="E-mail:">
+                    <input style="margin-top: 22px;" type="text" placeholder="+380" id="input_phone-number" oninput="validatePhoneNumber()">
+                    <input style="margin-top: 22px;" type="text" placeholder="E-mail" id="input_e-mail" oninput="validateEmail()">
                 </div>
                 <div class="row d-flex justify-content-between">
-                    <p class="col6">Error</p>
-                    <p class="col6">Error</p>
+                    <p class="col6" style="color: red; display: none;" id="error_input_phone-number"></p>
+                    <p style="color: red; display: none;" id="error_input_e-mail"></p>
                 </div>
             </div>
         </div>
         <div class="method_of_delivery">
             <p>Спосіб доставки</p>
             <div class="radio">
-                <input class="radio_input" type="radio" name="radio_delivery" id="choosen_nova-poshta" checked> 
-                <label class="radio_label" for="choosen_nova-poshta">Самовивіз з Нової Пошти</label>
+                <input class="radio_input" type="radio" name="radio_delivery" id="choosen_nova-poshta" checked>
+                <label class="radio_label" for="choosen_nova-poshta">Самовивіз з Нової Пошти</label> <br>
             </div>
             <div class="radio">
                 <input class="radio_input" type="radio" name="radio_delivery" id="choosen_ukrposhta"> 
-                <label class="radio_label" for="choosen_ukrposhta">Самовивіз з Укрпошти</label> 
+                <label class="radio_label" for="choosen_ukrposhta">Самовивіз з Укрпошти</label>
             </div>
             <div class="radio">
                 <input class="radio_input" type="radio" name="radio_delivery" id="choosen_meest-courier"> 
-                <label class="radio_label" for="choosen_meest-courier">Кур’єр Meest</label>
+                <label class="radio_label" for="choosen_meest-courier">Кур’єр Meest</label><br>
             </div>
         </div>
         <div class="payment-method">
@@ -137,22 +138,22 @@
             </div>
         </div>
         <div class="add_card" style="margin-left: 51px;">
-            <input style="margin-top: 42px; display: block;" type="text" placeholder="Номер картки" id="input_card-number">
-            <p>Error</p>
+            <input style="margin-top: 42px; display: none;" type="text" placeholder="Номер картки" id="input_card-number" oninput="validateCardNumber()"> <br>
+            <p style="color: red; display: none;" id="error_input_card-number"></p>
             <div style="width: 100%; margin-top: 22px;">
                 <div style="max-width: 369px; " class="d-flex justify-content-between">
-                    <input style="width: 148px; display: block;" type="text" placeholder="Термін дії" id="input_card-validity"> 
-                    <input style="width: 96px; display: block;" type="text" placeholder="CVV" id="input_cvv">
-                    <img src="../images/credit_card.png">
+                    <input style="width: 148px; display: none;" type="text" placeholder="MM/YY" id="input_card-validity" oninput="validateCardValidity()"> 
+                    <input style="width: 96px; display: none; height: 45px;" type="text" placeholder="CVV" id="input_cvv" oninput="validateCVV()">
+                    <img id="credit_card_img" style="height: 45px; display: none;" src="../images/credit_card.png">
                 </div>
                 <div class="row">
-                    <p class="col-5" style="text-align: center; color: red;" id="">Error</p>
-                    <p class="col-4" style="text-align: center; color: red;" id="">Error</p>
+                    <p class="col-5" style="color: red; display: none;" id="error_input_card-validity"></p>
+                    <p class="col-4" style="color: red; display: none;" id="error_input_cvv"></p>
                 </div>
             </div>
-            <button type="button">Додати</button>
+            <button style="display: none;" type="button">Додати</button>
         </div>
-        <button class="order_confirm" type="button">Замовлення підтверджую</button>
+        <button class="order_confirm" type="button" id="button_order-confirmation" onclick="checkAndConfirm()">Замовлення підтверджую</button>
 
     </main>
     <footer>
@@ -180,6 +181,7 @@
             </div>
         </div>
     </footer>
+    <script src="/ukrtrade/js/order_script.js"></script>
     <script src="../script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 </body>
