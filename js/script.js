@@ -5,3 +5,12 @@ $(document).ready(function() {
 		$('body').toggleClass('lock');
 	});
 });
+function changeBasketIcon () {
+	let pathToImage = "images/icon_basket_card_default.png";
+	if (document.getElementById("icon_basket_on_card").src == pathToImage) {
+		document.getElementById("icon_basket_on_card").src = "images/icon_basket_card.png";
+	} else {
+		document.getElementById("icon_basket_on_card").src = "images/icon_basket_card_default.png";
+	}
+	
+}

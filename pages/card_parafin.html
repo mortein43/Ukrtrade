@@ -12,16 +12,15 @@
     <link href="../style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <header class="header d-flex justify-content-between">
-        
-        <a href="../index.html" class="logo">
+    <header class="header">
+        <a href="index.html" class="logo">
             <figure>
-                <img src="../images/logo.png" alt="logo">
+                <img src="/ukrtrade/images/logo.png" alt="logo">
             </figure>
         </a>
         <div class="header_menu menu">
             <nav>
-                <ul class="nav d-flex justify-content-between nav_list">
+                <ul class="nav nav_list">
                     <li class="nav-item">
                       <a  href="#" style="padding: 0;">Про нас</a>
                     </li>
@@ -38,19 +37,19 @@
                         <a  href="#" style="padding: 0;">Контакти</a>
                     </li>
                     <li class="nav-item">
-                        <a  href="#" style="padding: 0;">UA <img style="margin-left: 5px;" src="/images/uk.png" alt="uk"></a>
+                        <a  href="#" style="padding: 0;">UA <img style="margin-left: 5px;" src="/ukrtradeimages/uk.png" alt="uk"></a>
                     </li>
                     <li class="nav-item">
-                        <a  href="/pages/catalog.html" style="padding: 0;">Каталог</a>
+                        <a  href="/ukrtrade/pages/catalog.html" style="padding: 0;">Каталог</a>
                     </li>
                 </ul>
             </nav>
-            <div class="header_input_dropdown row d-flex justify-content-between"> <!--d-flex justify-content-between-->
-                <a class="button_drop col-4" href="/pages/catalog.html">
-                    <img style="margin-left: 5%;" src="/images/iconForButtonDrop.png" alt="">
+            <div class="header_input_dropdown">
+                <a class="button_drop" href="/ukrtrade/pages/catalog.html">
+                    <img style="margin-left: 5%;" src="/ukrtrade/images/iconForButtonDrop.png" alt="">
                     <span style="margin-left: 5%;">Каталог</span>
                 </a>
-                <div class="header_input col-7">
+                <div class="header_input">
                     <input type="text" placeholder="Пошук" class="input-find ">
                 </div>
                 <div class="line_for_burger">
@@ -58,32 +57,31 @@
                         <span></span>
                     </div>
                 </div>
-                
             </div>
         </div>
         <div class="header_phone">
             <p>+48 (57) 105-5718</p>
             <div class="d-flex header_icons">
                 <div style="position: relative; margin-right: 15px;" class="header_icons_like_list">
-                    <img src="/images/icon_like.png" alt="like">
+                    <img src="/ukrtrade/images/icon_like.png" alt="like">
                     <p style="position: absolute; top: 1px; left: 33px; font-size: 10px; color: #fff;" onclick="">20</p>
                 </div>
                 <div style="position: relative; margin-right: 15px;" class="header_icons_basket_list">
-                    <a href="/pages/basket.html"><img src="/images/icon_basket.png" alt="like"></a>
-                    <p style="position: absolute; top: 1px; left: 36px; font-size: 10px; color: #fff;" onclick="">2</p>
+                    <a href="/ukrtrade/pages/basket.html"><img src="/ukrtrade/images/icon_basket.png" alt="like"></a>
+                    <p style="position: absolute; top: 1px; left: 36px; font-size: 10px; color: #fff;" onclick="">5</p>
                 </div>
-                <div style="position: relative;">
-                    <img src="/images/icon_login.png" alt="like">
+                <div style="position: relative;" class="header_icons_login">
+                    <img src="/ukrtrade/images/icon_login.png" alt="like">
                 </div>
             </div>
         </div>
     </header>
     <div class="basket_under_header_line">
-        <p>Головна <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14" fill="none">
+        <p><a href="/ukrtrade/index.html">Головна</a> <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14" fill="none">
             <path d="M1 13L5.5 7L0.999999 1" stroke="#5B5A5A" stroke-width="1.5" stroke-linecap="round"/>
-            </svg> Каталог <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14" fill="none">
+            </svg><a href="/ukrtrade/pages/catalog.html"> Каталог</a> <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14" fill="none">
                 <path d="M1 13L5.5 7L0.999999 1" stroke="#5B5A5A" stroke-width="1.5" stroke-linecap="round"/>
-                </svg> Парафін <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14" fill="none">
+                </svg><a href="/ukrtrade/pages/catalog.html"> Парафін</a> <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14" fill="none">
                     <path d="M1 13L5.5 7L0.999999 1" stroke="#5B5A5A" stroke-width="1.5" stroke-linecap="round"/>
                     </svg> Мікрокристалічний віск </p>
     </div>
@@ -178,70 +176,85 @@
         </div>
         <div class="block-4 d-flex justify-content-around">
             <div class="card-paraffin">
-                <a href="/pages/card_parafin.html">
                 <figure>
-                    <img class="icon_dont_like_card" src="/images/icon_dont_like.png" alt="dont like" style="display: block;" onclick="">
-                    <img src="/images/card_paraffin.png" alt="paraffin" style="width: 95%; margin-top: 97px;">
+                    <img class="icon_dont_like_card" src="images/icon_dont_like.png" alt="dont like" style="display: block;" onclick="">
+                    <a href="/pages/card_parafin.html">
+                    <img src="images/card_paraffin.png" alt="paraffin" style="width: 95%; margin-top: 97px;">
+                    </a>
                 </figure>
-                <h3 style="color: #202B46; font-size: 24px; color: #202B46; margin-top: 39px;">Мікрокристалічний віск<br><span style="color: #5B5A5A; font-size: 24px; font-weight: 500;">500г</span></h3>
-                <p style="color: #E31E24; font-size: 28px; font-weight: 600; margin-top: 20px;">300 грн</p>
-                <div class="d-flex justify-content-between" style="margin-top: 15px;">
-                    <div style="max-width: 100px; height: 18px;" class="d-flex justify-content-between">
-                        <img src="/images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
-                        <img src="/images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
-                        <img src="/images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
-                        <img src="/images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
-                    </div>
-                    <p style="color: #5B5A5A; font-size: 16px; font-weight: 500;">(5 відгуків)</p>
-                    <figure>
-                        <img class="icon_basket_card" src="/images/icon_basket_card.png" alt="backet" style="margin-top: -10px;" onclick="">
-                    </figure>
-                </div>
-                </a>
+                    <a href="/pages/card_parafin.html">
+                        <h3 style="color: #202B46; font-size: 24px; color: #202B46; margin-top: 39px;">Мікрокристалічний віск<br><span style="color: #5B5A5A; font-size: 24px; font-weight: 500;">500г</span></h3>
+                        <p style="color: #E31E24; font-size: 28px; font-weight: 600; margin-top: 20px;">300 грн</p>
+                    </a>
+                        <div class="d-flex justify-content-between" style="margin-top: 15px;">
+                            <a href="/pages/card_parafin.html">
+                            <div style="max-width: 100px; height: 18px;" class="d-flex justify-content-between">
+                                <img src="images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
+                                <img src="images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
+                                <img src="images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
+                                <img src="images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
+                            </div>
+                            </a>
+                            
+                            <p style="color: #5B5A5A; font-size: 16px; font-weight: 500;" class="link_in_card_parafin"><a href="/pages/card_parafin.html" style="color: #5B5A5A;">(5 відгуків)</a></p>
+                            <figure>
+                                <img id="icon_basket_on_card" class="icon_basket_card" src="images/icon_basket_card_default.png" alt="backet" style="margin-top: -10px;" onclick="changeBasketIcon()">
+                            </figure>
+                        </div>
             </div>
             <div class="card-paraffin">
-                <a href="/pages/card_parafin.html">
                 <figure>
-                    <img class="icon_dont_like_card" src="/images/icon_dont_like.png" alt="dont like" style="display: block;" onclick="">
-                    <img src="/images/card_paraffin.png" alt="paraffin" style="width: 95%; margin-top: 97px;">
+                    <img class="icon_dont_like_card" src="images/icon_dont_like.png" alt="dont like" style="display: block;" onclick="">
+                    <a href="/pages/card_parafin.html">
+                    <img src="images/card_paraffin.png" alt="paraffin" style="width: 95%; margin-top: 97px;">
+                    </a>
                 </figure>
-                <h3 style="color: #202B46; font-size: 24px; color: #202B46; margin-top: 39px;">Мікрокристалічний віск<br><span style="color: #5B5A5A; font-size: 24px; font-weight: 500;">500г</span></h3>
-                <p style="color: #E31E24; font-size: 28px; font-weight: 600; margin-top: 20px;">300 грн</p>
-                <div class="d-flex justify-content-between" style="margin-top: 15px;">
-                    <div style="max-width: 100px; height: 18px;" class="d-flex justify-content-between">
-                        <img src="/images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
-                        <img src="/images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
-                        <img src="/images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
-                        <img src="/images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
-                    </div>
-                    <p style="color: #5B5A5A; font-size: 16px; font-weight: 500;">(5 відгуків)</p>
-                    <figure>
-                        <img class="icon_basket_card" src="/images/icon_basket_card.png" alt="backet" style="margin-top: -10px;" onclick="">
-                    </figure>
-                </div>
-                </a>
+                    <a href="/pages/card_parafin.html">
+                        <h3 style="color: #202B46; font-size: 24px; color: #202B46; margin-top: 39px;">Мікрокристалічний віск<br><span style="color: #5B5A5A; font-size: 24px; font-weight: 500;">500г</span></h3>
+                        <p style="color: #E31E24; font-size: 28px; font-weight: 600; margin-top: 20px;">300 грн</p>
+                    </a>
+                        <div class="d-flex justify-content-between" style="margin-top: 15px;">
+                            <a href="/pages/card_parafin.html">
+                            <div style="max-width: 100px; height: 18px;" class="d-flex justify-content-between">
+                                <img src="images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
+                                <img src="images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
+                                <img src="images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
+                                <img src="images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
+                            </div>
+                            </a>
+                            
+                            <p style="color: #5B5A5A; font-size: 16px; font-weight: 500;" class="link_in_card_parafin"><a href="/pages/card_parafin.html" style="color: #5B5A5A;">(5 відгуків)</a></p>
+                            <figure>
+                                <img id="icon_basket_on_card" class="icon_basket_card" src="images/icon_basket_card_default.png" alt="backet" style="margin-top: -10px;" onclick="changeBasketIcon()">
+                            </figure>
+                        </div>
             </div>
             <div class="card-paraffin">
-                <a href="/pages/card_parafin.html">
                 <figure>
-                    <img class="icon_dont_like_card" src="/images/icon_dont_like.png" alt="dont like" style="display: block;" onclick="">
-                    <img src="/images/card_paraffin.png" alt="paraffin" style="width: 95%; margin-top: 97px;">
+                    <img class="icon_dont_like_card" src="images/icon_dont_like.png" alt="dont like" style="display: block;" onclick="">
+                    <a href="/pages/card_parafin.html">
+                    <img src="images/card_paraffin.png" alt="paraffin" style="width: 95%; margin-top: 97px;">
+                    </a>
                 </figure>
-                <h3 style="color: #202B46; font-size: 24px; color: #202B46; margin-top: 39px;">Мікрокристалічний віск<br><span style="color: #5B5A5A; font-size: 24px; font-weight: 500;">500г</span></h3>
-                <p style="color: #E31E24; font-size: 28px; font-weight: 600; margin-top: 20px;">300 грн</p>
-                <div class="d-flex justify-content-between" style="margin-top: 15px;">
-                    <div style="max-width: 100px; height: 18px;" class="d-flex justify-content-between">
-                        <img src="/images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
-                        <img src="/images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
-                        <img src="/images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
-                        <img src="/images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
-                    </div>
-                    <p style="color: #5B5A5A; font-size: 16px; font-weight: 500;">(5 відгуків)</p>
-                    <figure>
-                        <img class="icon_basket_card" src="/images/icon_basket_card.png" alt="backet" style="margin-top: -10px;" onclick="">
-                    </figure>
-                </div>
-                </a>
+                    <a href="/pages/card_parafin.html">
+                        <h3 style="color: #202B46; font-size: 24px; color: #202B46; margin-top: 39px;">Мікрокристалічний віск<br><span style="color: #5B5A5A; font-size: 24px; font-weight: 500;">500г</span></h3>
+                        <p style="color: #E31E24; font-size: 28px; font-weight: 600; margin-top: 20px;">300 грн</p>
+                    </a>
+                        <div class="d-flex justify-content-between" style="margin-top: 15px;">
+                            <a href="/pages/card_parafin.html">
+                            <div style="max-width: 100px; height: 18px;" class="d-flex justify-content-between">
+                                <img src="images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
+                                <img src="images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
+                                <img src="images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
+                                <img src="images/icon_star_card.png" alt="star" style="width: 19px; height: 18px;">
+                            </div>
+                            </a>
+                            
+                            <p style="color: #5B5A5A; font-size: 16px; font-weight: 500;" class="link_in_card_parafin"><a href="/pages/card_parafin.html" style="color: #5B5A5A;">(5 відгуків)</a></p>
+                            <figure>
+                                <img id="icon_basket_on_card" class="icon_basket_card" src="images/icon_basket_card_default.png" alt="backet" style="margin-top: -10px;" onclick="changeBasketIcon()">
+                            </figure>
+                        </div>
             </div>
         </div>
     </main>

@@ -27,7 +27,7 @@ body {
 .header_input_dropdown {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .header_menu > nav > ul > li > a {
     color: #5B5A5A;
@@ -44,7 +44,7 @@ body {
     top: 0;
     width: 100%;
     background-color: #FFF;
-    z-index: 2;
+    z-index: 3;
 }
 .button_drop {
     background-color: rgb(255, 255, 255, 0);
@@ -54,13 +54,17 @@ body {
     height: 42px;
     color: #5B5A5A;
     cursor: pointer;
+    min-width: 150px;
 }
 .button_drop:hover {
     text-decoration: none;
     color: #5B5A5A;
 }
 .header_input {
+    width: 75%;
     padding: 0;
+    display: flex;
+    justify-content: space-around;
 }
 .header_input_dropdown {
     width: 100%;
@@ -68,7 +72,7 @@ body {
 .input-find {
     text-align: center;
     background: url(images/icon_find.png) no-repeat center; 
-    background-position: 65%;
+    background-position: 60%;
     width: 100%;
     height: 42px;
     border-radius: 20px;
@@ -86,8 +90,9 @@ body {
 .header_icons {
     margin-top: 13px;
 }
-.header_icons_like_list, .header_icons_basket_list {
+.header_icons_like_list:hover, .header_icons_basket_list:hover, .header_icons_login:hover {
     cursor: pointer;
+    opacity: 0.5;
 }
 main {
     padding: 0 55px 89px 55px;
@@ -169,6 +174,12 @@ main {
 .block-4>.card-paraffin>a:hover {
     text-decoration: none;
 }
+.block-4>a:hover {
+    text-decoration: none;
+}
+.link_in_card_parafin>a:hover {
+    text-decoration: none;
+}
 .card-paraffin {
     max-width: 380px;
     height: 500px;
@@ -176,14 +187,23 @@ main {
     border-radius: 20px;
     padding: 22px 20px 22px 40px;
     position: relative;
+    z-index: 2;
 }
 .icon_dont_like_card {
     position: absolute;
     top: 22px;
     right: 20px;
+    z-index: 3;
 }
+.icon_dont_like_card:hover {
+    opacity: 0.5;
+}
+
 .icon_dont_like_card, .icon_basket_card {
     cursor: pointer;
+}
+.icon_basket_card:hover {
+    opacity: 0.5;
 }
 /*footer*/
 footer {
@@ -483,6 +503,20 @@ footer>div>div>a:hover {
     cursor: pointer;
     text-decoration: none;
 }
+.minusOne:hover, .plusOne:hover, .close_grey:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.basket_buttons>a:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.basket_under_header_line>p>a {
+    color: #fff;
+}
+.basket_under_header_line>p>a:hover {
+    opacity: 0.5;
+}
 /*order.html*/
 .user_info_order {
     max-width: 640px;
@@ -609,6 +643,9 @@ footer>div>div>a:hover {
     outline: none;
     margin-top: 74px;
 }
+.order_confirm:hover {
+    opacity: 0.5;
+}
 /*catalog.html*/
 .catalog_aside {
     padding-top: 158px;
@@ -705,6 +742,9 @@ tbody>tr {
 }
 table {
     width: 35%;
+}
+#buy:hover {
+    opacity: 0.5;
 }
 
 

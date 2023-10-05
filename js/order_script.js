@@ -93,27 +93,27 @@ function validateName() {
     if (surnameInput.value.length > 1 && nameInput.value.length > 1) {
         if (cyrillicRegex.test(nameInput.value) != cyrillicRegex.test(surnameInput.value)) {
             nameError.innerHTML = "* ім'я та прізвище написані різними мовами";
-            nameError.style.display = "block";
+            nameError.style.visibility = "visible";
             return false;
         }
         nameError.innerHTML = "";
-        nameError.style.display = "none";
+        nameError.style.visibility = "hidden";
         surnameError.innerHTML = "";
-        surnameError.style.display = "none";
+        surnameError.style.visibility = "hidden";
     }
     if (nameInput.value.length == 0) {
         nameError.innerHTML = "* введіть ім'я";
-        nameError.style.display = "block";
+        nameError.style.visibility = "visible";
         return false;
     }
     if (!nameSurnameRegex.test(nameInput.value) || nameInput.value.length == 1) {
         nameError.innerHTML = "* введіть ім'я правильно";
-        nameError.style.display = "block";
+        nameError.style.visibility = "visible";
         return false;
     }
-    if (nameError.style.display != "none") {
+    if (nameError.style.visibility != "hidden") {
         nameError.innerHTML = "";
-        nameError.style.display = "none";
+        nameError.style.visibility = "hidden";
         return true;
     }
     return true;
@@ -123,27 +123,27 @@ function validateSurname() {
     if (nameInput.value.length > 1 && surnameInput.value.length > 1) {
         if (cyrillicRegex.test(nameInput.value) != cyrillicRegex.test(surnameInput.value)) {
             surnameError.innerHTML = "* ім'я та прізвище написані різними мовами";
-            surnameError.style.display = "block";
+            surnameError.style.visibility = "visible";
             return false;
         }
         nameError.innerHTML = "";
-        nameError.style.display = "none";
+        nameError.style.visibility = "hidden";
         surnameError.innerHTML = "";
-        surnameError.style.display = "none";
+        surnameError.style.visibility = "hidden";
     }
     if (surnameInput.value.length == 0) {
         surnameError.innerHTML = "* введіть прізвище";
-        surnameError.style.display = "block";
+        surnameError.style.visibility = "visible";
         return false;
     }
     if (!nameSurnameRegex.test(surnameInput.value) || surnameInput.value.length == 1) {
         surnameError.innerHTML = "* введіть прізвище правильно";
-        surnameError.style.display = "block";
+        surnameError.style.visibility = "visible";
         return false;
     }
-    if (surnameError.style.display != "none") {
+    if (surnameError.style.visibility != "hidden") {
         surnameError.innerHTML = "";
-        surnameError.style.display = "none";
+        surnameError.style.visibility = "hidden";
         return true;
     }
     return true;
@@ -165,12 +165,12 @@ function validatePhoneNumber() {
 
     if (!isCorrect) {
         phoneError.innerHTML = "* введіть повний номер телефону";
-        phoneError.style.display = "block";
+        phoneError.style.visibility = "visible";
         return false;
     }
-    if (phoneError.style.display != "none") {
+    if (phoneError.style.visibility != "hidden") {
         phoneError.innerHTML = "";
-        phoneError.style.display = "none";
+        phoneError.style.visibility = "hidden";
         return true;
     }
     return true;
@@ -179,17 +179,17 @@ function validatePhoneNumber() {
 function validateEmail() {
     if (emailInput.value.length == 0) {
         emailError.innerHTML = "* введіть ел. адресу";
-        emailError.style.display = "block";
+        emailError.style.visibility = "visible";
         return false;
     }
     if (!emailRegex.test(emailInput.value)) {
         emailError.innerHTML = "* введіть ел. адресу правильно";
-        emailError.style.display = "block";
+        emailError.style.visibility = "visible";
         return false;
     }
-    if (emailError.style.display != "none") {
+    if (emailError.style.visibility != "hidden") {
         emailError.innerHTML = "";
-        emailError.style.display = "none";
+        emailError.style.visibility = "hidden";
         return true;
     }
     return true;
