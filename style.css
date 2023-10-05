@@ -645,6 +645,48 @@ footer>div>div>a:hover {
 }
 .order_confirm:hover {
     opacity: 0.5;
+    
+}
+.info_after_buy {
+    width: 500px;
+    height: 350px;
+    background-color: #d8d5d5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 550px;
+    padding: 30px;
+    border-radius: 25px;
+    visibility: hidden;
+    z-index: 5;
+
+}
+.info_after_buy>img {
+    width: 139px;
+    border-radius: 25px;
+    background-color: #298b29;
+    padding: 15px;
+}
+.info_after_buy>p {
+    text-align: center;
+    color: #298b29;
+    font-size: 24px;
+    font-weight: 700;
+}
+.info_after_buy>a {
+    width: 175px;
+    background-color: #329e71;
+    color: white;
+    padding: 25px;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+}
+.info_after_buy>a:hover {
+    opacity: 0.5;
 }
 /*catalog.html*/
 .catalog_aside {

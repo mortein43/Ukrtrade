@@ -296,11 +296,35 @@ function checkAndConfirm() {
     if (!checkedPayNow) {
         if (validateName() && validateSurname() && validatePhoneNumber() && validateEmail()) {
             console.log("succesful");
+            document.getElementById("body_for_order").style.visibility = "hidden";
+            document.getElementById("header_for_order").style.display = "none";
+            document.getElementById("info_after_buy").style.visibility = "visible";
+            document.getElementById("body_for_order").style.display = "flex";
+            document.getElementById("body_for_order").style.justifyContent = "center";
+            document.getElementById("body_for_order").style.alignItems = "center";
+            document.getElementById("body_for_order").style.overflow = "hidden";
         }
     }
     else {
         if (validateName() && validateSurname() && validatePhoneNumber() && validateEmail() && validateCardNumber() && validateCardValidity() && validateCVV()) {
             console.log("succesful");
+            document.getElementById("body_for_order").style.visibility = "hidden";
+            document.getElementById("header_for_order").style.display = "none";
+            document.getElementById("info_after_buy").style.visibility = "visible";
+            document.getElementById("body_for_order").style.display = "flex";
+            document.getElementById("body_for_order").style.justifyContent = "center";
+            document.getElementById("body_for_order").style.alignItems = "center";
+            document.getElementById("body_for_order").style.overflow = "hidden";
         }
     }
+}
+
+function returnOnIndex() {
+    document.getElementById("body_for_order").style.visibility = "visible";
+    document.getElementById("header_for_order").style.display = "block";
+    document.getElementById("info_after_buy").style.visibility = "hidden";
+    document.getElementById("body_for_order").style.display = "block";
+    document.getElementById("body_for_order").style.justifyContent = "center";
+    document.getElementById("body_for_order").style.alignItems = "center";
+    document.getElementById("body_for_order").style.overflow = "auto";
 }
