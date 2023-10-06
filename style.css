@@ -208,6 +208,10 @@ main {
 /*footer*/
 footer {
     padding-bottom: 49px;
+    display: flex;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 5;
 }
 footer>div>div>a>p {
     color: #202B46;
@@ -802,6 +806,9 @@ table {
     text-align: center;
 }
 /*contacts.html*/
+.main_contacts {
+    padding: 50px;
+}
 .main_contacts>div {
     width: 20%;
     display: flex;
@@ -809,6 +816,9 @@ table {
 }
 .main_contacts>div>p {
     font-size: 24px;
+}
+.main_contacts>iframe {
+    border-radius: 25px;
 }
 
 
