@@ -819,6 +819,9 @@ table {
 .main_contacts>iframe {
     border-radius: 25px;
 }
+.divDot {
+    visibility: hidden;
+}
 
 
 
