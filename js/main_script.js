@@ -3,7 +3,7 @@ let basketItems = new Map();
 function changeBasketImage(id) {
     let element = document.getElementById("icon_basket_on_card_" + id);
     
-    if (element.getAttribute("src") == "/ukrtade/images/icon_basket_card_default.png") {
+    if (element.getAttribute("src") == "/images/icon_basket_card_default.png") {
         document.getElementById("icon_basket_on_card_" + id).src = "/ukrtade/images/icon_basket_card.png";
         return true;
     }
