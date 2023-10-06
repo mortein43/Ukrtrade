@@ -799,4 +799,13 @@ table {
         font-size: 8px;
     }
 }
-
+/*Сховали*/
+.header_icons_like_list {
+    visibility: hidden;
+}
+.icon_dont_like_card {
+    visibility: hidden;
+}
+.icon_liked_card {
+    visibility: hidden;
+}
