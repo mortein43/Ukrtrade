@@ -792,6 +792,9 @@ table {
     opacity: 0.5;
 }
 /*about_us.html*/
+.main_about_us {
+    height: 65%;
+}
 .main_about_us>h2 {
     font-size: 32px;
     text-align: center;
