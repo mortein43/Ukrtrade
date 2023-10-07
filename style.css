@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
 }
+html, body {
+    height: 100%;
+}
 
 body {
     font-family: Roboto;
@@ -819,9 +822,7 @@ table {
 .main_contacts>iframe {
     border-radius: 25px;
 }
-.divDot {
-    visibility: hidden;
-}
+
 
 
 
@@ -841,4 +842,16 @@ table {
 }
 .icon_liked_card {
     visibility: hidden;
+}
+.divDot {
+    visibility: hidden;
+}
+/*Прибиваєм footer до низу на сторінці  about_us.html*/
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main_about_us {
+    flex: 1 1 auto;
 }
